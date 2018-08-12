@@ -22,6 +22,12 @@ class Transfer
       sender.deposit(-@amount)
       receiver.deposit(@amount)
       @status = "complete"
-      
+    end
+  end
   
+  
+  
+  def reject
+    
+  end 
 end
