@@ -18,6 +18,11 @@ class Transfer
   end
   
   def execute_transaction
+    if !@sender.valid?
+      # Reject Transfer
+      
+    end
+    
     if @status == "pending"
       sender.deposit(-@amount)
       receiver.deposit(@amount)
