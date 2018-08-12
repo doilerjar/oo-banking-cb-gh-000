@@ -21,8 +21,7 @@ class Transfer
     if !@sender.valid?
       # Reject Transfer
       @status = "rejected"
-      "Transaction rejected. Please check your account balance."
-      return
+      return "Transaction rejected. Please check your account balance."
     end
     
     if @status == "pending"
